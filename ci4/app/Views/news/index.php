@@ -1,3 +1,19 @@
+
+<style>
+    * {
+        background-color: #c8bca4;
+    }
+
+    a {
+        color: #007bff;
+    }
+
+    a:visited {
+        color: purple;
+    }
+    
+</style>
+
 <h2><?= esc($title) ?></h2>
 
 <?php if (! empty($news) && is_array($news)): ?>
@@ -20,3 +36,11 @@
     <p>Unable to find any news for you.</p>
 
 <?php endif ?>
+
+<form action="<?= base_url('news/new') ?>" method="get">
+    <button type="submit"style="color: black; cursor: pointer;">Post a Comment</button>
+</form>
+
+<form action="<?= base_url('main') ?>" method="get">
+    <button type="submit" style="color: black; cursor: pointer;">Back to About Me</button>
+</form>
